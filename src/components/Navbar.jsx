@@ -48,7 +48,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between transition-all duration-500 ${
+    <>
+      <nav className={`fixed top-0 left-0 right-0 z-[100] px-6 py-4 flex items-center justify-between transition-all duration-500 ${
       isScrolled && !isMenuOpen ? 'bg-white/70 backdrop-blur-lg border-b border-gray-200/30 py-3 shadow-lg shadow-black/5' : 'bg-transparent py-5'
     }`}>
       <div className="relative z-[120] flex items-center space-x-3 group cursor-pointer" onClick={(e) => handleNavClick(e, '#')}>
@@ -56,7 +57,7 @@ const Navbar = () => {
           <span className="text-white text-xs font-bold">P</span>
         </div>
         <span className={`font-bold text-xl tracking-tight transition-colors duration-300 ${
-          isMenuOpen ? 'text-white' : (isScrolled ? 'text-gray-900' : 'text-white')
+          isMenuOpen ? 'text-black' : (isScrolled ? 'text-gray-900' : 'text-white')
         }`}>
           Pixel Poultry
         </span>
@@ -98,32 +99,38 @@ const Navbar = () => {
         </button>
       </div>
 
+      </nav>
+
       {/* Mobile Menu Overlay (Backdrop) */}
       <div 
-        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] lg:hidden transition-opacity duration-500 ${
-          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[1000] lg:hidden transition-all duration-500 ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         onClick={() => setIsMenuOpen(false)}
       />
 
       {/* Mobile Menu Panel */}
-      <div className={`fixed top-0 right-0 h-full w-[80%] sm:w-[50%] bg-white z-[110] lg:hidden transform transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+      <div className={`fixed top-0 right-0 h-screen w-[300px] max-w-[85vw] bg-white z-[1001] lg:hidden transform transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-      } shadow-[-20px_0_60px_-15px_rgba(0,0,0,0.3)] flex flex-col`}>
-        <div className="flex-1 px-8 py-24 overflow-y-auto scrollbar-hide">
-          <div className="flex flex-col space-y-0.5">
+      } shadow-2xl flex flex-col`}>
+        <div className="h-24 flex items-center justify-end px-8">
+          {/* Spacer for navbar height if needed, or close button could be here */}
+        </div>
+        
+        <div className="flex-1 px-8 py-4 overflow-y-auto scrollbar-hide">
+          <div className="flex flex-col space-y-1">
             <div className="px-4 mb-4">
-              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Navigation</p>
+              <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">Navigation</p>
             </div>
             {navLinks.map((link, i) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="group py-5 px-4 border-b border-gray-50/50 flex items-center justify-between text-black transition-all active:bg-gray-100 hover:bg-gray-50"
+                className="group py-5 px-4 border-b border-gray-50 flex items-center justify-between text-black transition-all active:bg-gray-50"
               >
-                <span className="text-base font-bold uppercase tracking-tight">{link.name}</span>
-                <svg className="w-4 h-4 text-gray-300 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="text-sm font-bold uppercase tracking-widest">{link.name}</span>
+                <svg className="w-4 h-4 text-gray-200 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
               </a>
@@ -131,11 +138,11 @@ const Navbar = () => {
           </div>
         </div>
         
-        <div className="p-12 border-t border-gray-100">
+        <div className="p-10 border-t border-gray-100 bg-gray-50/50">
           <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-bold">Pixel Poultry — Design Thinking</p>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 

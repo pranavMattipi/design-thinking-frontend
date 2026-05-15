@@ -2,11 +2,11 @@ import React from 'react';
 
 const teamMembers = [
   { initials: 'SR', name: 'Shaon Ryan Ranjit', role: 'Research & Ideation', color: 'bg-teal-50 text-teal-600 border-teal-100' },
-  { initials: 'KS', name: 'K. Sai Harshith',   role: 'User Research',       color: 'bg-purple-50 text-purple-600 border-purple-100' },
-  { initials: 'PA', name: 'Param Ankam',        role: 'Ideation Lead',       color: 'bg-pink-50 text-pink-600 border-pink-100' },
-  { initials: 'AJ', name: 'Anirudh Jampana',    role: 'Problem Framing',     color: 'bg-blue-50 text-blue-600 border-blue-100' },
-  { initials: 'SV', name: 'Sreekar Vajja',      role: 'Evaluation',          color: 'bg-green-50 text-green-600 border-green-100' },
-  { initials: 'PM', name: 'Pranav Mattipi',     role: 'Solution Design',     color: 'bg-amber-50 text-amber-600 border-amber-100' },
+  { initials: 'KS', name: 'K. Sai Harshith', role: 'User Research', color: 'bg-purple-50 text-purple-600 border-purple-100' },
+  { initials: 'PA', name: 'Param Ankam', role: 'Ideation Lead', color: 'bg-pink-50 text-pink-600 border-pink-100' },
+  { initials: 'AJ', name: 'Anirudh Jampana', role: 'Problem Framing', color: 'bg-blue-50 text-blue-600 border-blue-100' },
+  { initials: 'RJ', name: 'Ruthvik Jasthi', role: 'Evaluation', color: 'bg-green-50 text-green-600 border-green-100' },
+  { initials: 'PM', name: 'Pranav Mattipi', role: 'Solution Design', color: 'bg-amber-50 text-amber-600 border-amber-100' },
 ];
 
 const AboutUs = () => {

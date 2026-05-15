@@ -34,7 +34,7 @@ const contributorColors = {
   'K. Sai Harshith':   'bg-purple-50 text-purple-600 border-purple-100',
   'Param Ankam':        'bg-pink-50 text-pink-600 border-pink-100',
   'Anirudh Jampana':   'bg-blue-50 text-blue-600 border-blue-100',
-  'Sreekar Vajja':      'bg-green-50 text-green-600 border-green-100',
+  'Ruthvk Jasthi':      'bg-green-50 text-green-600 border-green-100',
   'Pranav Mattipi':     'bg-amber-50 text-amber-600 border-amber-100',
 };
 

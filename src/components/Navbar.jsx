@@ -79,11 +79,11 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Button */}
-      <div className="lg:hidden relative z-[110]">
+      <div className="lg:hidden relative z-[120]">
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className={`p-2 transition-colors duration-300 ${
-            isMenuOpen ? 'text-white' : (isScrolled ? 'text-gray-900' : 'text-white')
+            isMenuOpen ? 'text-black' : (isScrolled ? 'text-gray-900' : 'text-white')
           }`}
         >
           {isMenuOpen ? (
@@ -98,26 +98,37 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 bg-gray-900/98 backdrop-blur-2xl z-[100] lg:hidden animate-fadeIn">
-          <div className="flex flex-col items-start justify-center h-full space-y-6 px-12 animate-slideDown">
-            <div className="w-12 h-[1px] bg-white/20 mb-4"></div>
+      {/* Mobile Menu Overlay (Backdrop) */}
+      <div 
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] lg:hidden transition-opacity duration-500 ${
+          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
+
+      {/* Mobile Menu Panel */}
+      <div className={`fixed top-0 right-0 h-full w-[80%] sm:w-[50%] bg-white z-[110] lg:hidden transform transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+      } shadow-[-20px_0_60px_-15px_rgba(0,0,0,0.3)] flex flex-col`}>
+        <div className="flex-1 flex flex-col justify-center px-12 py-20 overflow-y-auto">
+          <div className="flex flex-col space-y-8">
             {navLinks.map((link, i) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-3xl font-bold text-white/90 hover:text-white transition-all hover:translate-x-2 flex items-center group uppercase tracking-tighter"
-                style={{ animationDelay: `${i * 70}ms` }}
+                className="text-2xl font-black text-black hover:text-gray-400 transition-all transform hover:translate-x-2 uppercase tracking-tighter"
               >
-                <span className="text-[10px] mr-4 opacity-0 group-hover:opacity-100 transition-opacity font-mono text-teal-400">0{i + 1}</span>
                 {link.name}
               </a>
             ))}
           </div>
         </div>
-      )}
+        
+        <div className="p-12 border-t border-gray-100">
+          <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-bold">Pixel Poultry — Design Thinking</p>
+        </div>
+      </div>
     </nav>
   );
 };

@@ -28,100 +28,92 @@ const allIdeas = [
   { id: 25, idea: 'Blockchain-based tracking for premium sarees',                     f: 2, d: 4, v: 5, total: 11, top10: false },
 ];
 
-const totalBadge = (total, top10) => {
-  if (total === 15) return 'bg-green-100 text-green-700 font-bold';
-  if (total === 14) return 'bg-green-100 text-green-700 font-bold';
-  if (total === 13) return 'bg-green-100 text-green-700 font-bold';
-  if (total === 12) return 'bg-amber-100 text-amber-700 font-bold';
-  return 'bg-orange-100 text-orange-700 font-bold';
+const totalBadge = (total) => {
+  if (total >= 13) return 'bg-green-50 text-green-700 border-green-100 font-bold';
+  if (total === 12) return 'bg-amber-50 text-amber-700 border-amber-100 font-bold';
+  return 'bg-orange-50 text-orange-700 border-orange-100 font-bold';
 };
 
 const EvaluationShortlisting = () => {
   return (
-    <section id="evaluation-shortlisting" className="bg-gray-50 py-16 px-6">
-      <div className="max-w-4xl mx-auto space-y-8">
+    <section id="evaluation-shortlisting" className="bg-gray-50/50 py-24 px-6">
+      <div className="max-w-4xl mx-auto space-y-16">
 
         {/* Section Title */}
-        <h2 className="text-2xl font-bold text-gray-900">Evaluation &amp; Shortlisting</h2>
-
-        {/* Criteria Cards */}
-        <div>
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Evaluation criteria</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              { letter: 'F', label: 'Feasibility', desc: 'Can it realistically be implemented given resources, tech, and logistics?' },
-              { letter: 'D', label: 'Desirability', desc: 'Does it address real needs of weavers and customers?' },
-              { letter: 'V', label: 'Viability', desc: 'Is it sustainable and scalable long-term?' },
-            ].map((c) => (
-              <div key={c.letter} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-                <p className="text-3xl font-bold text-gray-900 mb-1">{c.letter}</p>
-                <p className="text-sm font-semibold text-gray-700 mb-2">{c.label}</p>
-                <p className="text-xs text-gray-500 leading-relaxed">{c.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-gray-500 mt-4 leading-relaxed">
-            Each criterion scored 1–5. Maximum total: 15. Ideas scoring 13 or above were shortlisted. All ideas
-            were scored by the full team and discussed before finalising ratings.
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Evaluation & Shortlisting</h2>
+          <p className="text-gray-500 leading-relaxed text-lg">
+            We evaluated 25+ ideas against three core criteria to identify the most impactful solutions for weavers.
           </p>
         </div>
 
-        {/* Scoring Table */}
-        <div>
-          <h3 className="text-base font-bold text-gray-900 mb-4">Full scoring table — all ideas rated</h3>
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            {/* Header */}
-            <div className="grid grid-cols-[2rem_1fr_2rem_2rem_2rem_3.5rem] gap-2 px-4 py-3 bg-gray-50 border-b border-gray-100 text-xs font-semibold text-gray-500">
-              <span>#</span>
-              <span>Idea</span>
-              <span className="text-center">F</span>
-              <span className="text-center">D</span>
-              <span className="text-center">V</span>
-              <span className="text-center">Total</span>
+        {/* Criteria Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { letter: 'F', label: 'Feasibility', desc: 'Can it realistically be implemented given resources?' },
+            { letter: 'D', label: 'Desirability', desc: 'Does it address real needs of weavers and customers?' },
+            { letter: 'V', label: 'Viability', desc: 'Is it sustainable and scalable long-term?' },
+          ].map((c) => (
+            <div key={c.letter} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm text-center hover-lift group">
+              <p className="text-4xl font-bold text-gray-900 mb-2 transition-transform duration-300 group-hover:scale-110">{c.letter}</p>
+              <p className="text-sm font-bold text-gray-700 uppercase tracking-widest mb-4">{c.label}</p>
+              <p className="text-xs text-gray-400 leading-relaxed">{c.desc}</p>
             </div>
-            {/* Rows */}
-            {allIdeas.map((row) => (
-              <div
-                key={row.id}
-                className={`grid grid-cols-[2rem_1fr_2rem_2rem_2rem_3.5rem] gap-2 px-4 py-3 border-b border-gray-50 items-center text-sm ${row.top10 ? 'bg-white' : 'bg-white'}`}
-              >
-                <span className="text-gray-400 text-xs">{row.id}</span>
-                <span className="text-gray-800 leading-snug text-xs">
-                  {row.idea}
-                  {row.top10 && (
-                    <span className="ml-1.5 inline-block px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 text-[10px] font-semibold align-middle">Top 10</span>
-                  )}
-                </span>
-                <span className="text-center text-gray-600 text-xs">{row.f}</span>
-                <span className="text-center text-gray-600 text-xs">{row.d}</span>
-                <span className="text-center text-gray-600 text-xs">{row.v}</span>
-                <span className="flex justify-center">
-                  <span className={`px-2 py-0.5 rounded-full text-xs ${totalBadge(row.total, row.top10)}`}>
-                    {row.total}/15
-                  </span>
-                </span>
+          ))}
+        </div>
+
+        {/* Scoring Table */}
+        <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden hover-lift">
+          <div className="px-8 py-6 border-b border-gray-100 flex items-center justify-between">
+            <h3 className="font-bold text-gray-900">Scoring Table — Top Shortlisted Ideas</h3>
+            <span className="text-[10px] uppercase tracking-widest font-bold text-gray-400">Score ≥ 13 required</span>
+          </div>
+          
+          <div className="overflow-x-auto">
+            <div className="min-w-[600px]">
+              {/* Header */}
+              <div className="grid grid-cols-[3rem_1fr_3rem_3rem_3rem_5rem] gap-4 px-8 py-4 bg-gray-50/50 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                <span>#</span>
+                <span>Idea</span>
+                <span className="text-center">F</span>
+                <span className="text-center">D</span>
+                <span className="text-center">V</span>
+                <span className="text-center">Total</span>
               </div>
-            ))}
+              {/* Rows */}
+              {allIdeas.map((row) => (
+                <div
+                  key={row.id}
+                  className="grid grid-cols-[3rem_1fr_3rem_3rem_3rem_5rem] gap-4 px-8 py-5 border-b border-gray-50 items-center text-sm transition-colors duration-200 hover:bg-gray-50/80 group"
+                >
+                  <span className="text-gray-400 font-mono text-xs">{row.id.toString().padStart(2, '0')}</span>
+                  <span className="text-gray-900 font-medium leading-snug">
+                    {row.idea}
+                    {row.top10 && (
+                      <span className="ml-3 inline-block px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 text-[9px] font-bold uppercase tracking-wider align-middle border border-blue-100">Shortlisted</span>
+                    )}
+                  </span>
+                  <span className="text-center text-gray-500 font-medium">{row.f}</span>
+                  <span className="text-center text-gray-500 font-medium">{row.d}</span>
+                  <span className="text-center text-gray-500 font-medium">{row.v}</span>
+                  <span className="flex justify-center">
+                    <span className={`px-3 py-1 rounded-full text-[10px] border ${totalBadge(row.total)}`}>
+                      {row.total}/15
+                    </span>
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Conclusion */}
-        <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-          <h3 className="text-lg font-bold text-gray-900 mb-3">Conclusion</h3>
-          <p className="text-gray-600 leading-relaxed">
-            Our top three ideas all scored a perfect 15/15 and cluster around a single core insight: the weaver
-            is invisible to the customer, and making that invisibility disappear — through story, verification,
-            and direct connection — is the highest-leverage design move available. Ideas scoring below 13 were
-            excluded for either low feasibility (e.g. blockchain at village scale) or insufficient desirability
-            (e.g. solutions that help weavers but give customers no reason to engage differently).
+        <div className="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm hover-lift">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Conclusion</h3>
+          <p className="text-gray-600 leading-relaxed text-lg text-center max-w-2xl mx-auto">
+            Our top three ideas all scored a perfect 15/15. Making the weaver visible through story, verification,
+            and direct connection is the highest-leverage design move available.
           </p>
-        </div>
-
-        {/* Down Arrow */}
-        <div className="flex justify-center">
-          <svg className="w-6 h-6 text-gray-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-          </svg>
         </div>
 
       </div>

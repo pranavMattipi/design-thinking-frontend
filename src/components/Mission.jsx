@@ -2,14 +2,16 @@ import React from 'react';
 
 const Mission = () => {
   return (
-    <section className="py-24 bg-white px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#7a1c4b] mb-12 tracking-[0.2em]">
-          Mission of the project
+    <section className="py-32 bg-white px-6">
+      <div className="max-w-4xl mx-auto text-center space-y-12">
+        <h2 className="text-[10px] uppercase tracking-[0.5em] font-bold text-gray-400">
+          Our Final Mission
         </h2>
-        <p className="text-lg md:text-xl text-gray-800 italic font-normal leading-relaxed max-w-2xl mx-auto">
-          Working on the lack of judicial awareness in India
-        </p>
+        <div className="hover-lift p-12 bg-gray-50/50 rounded-3xl border border-gray-100">
+          <p className="text-3xl md:text-5xl font-script text-gray-900 leading-tight">
+            "To bridge the invisibility gap between weaver and wearer, ensuring dignity and economic justice through storytelling and technology."
+          </p>
+        </div>
       </div>
     </section>
   );

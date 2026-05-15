@@ -1,68 +1,55 @@
 import React from 'react';
 
 const hmwQuestions = [
-  'HMW make traditional pattu saree weaving more attractive to young weavers as a career?',
+  'HMW make traditional pattu saree weaving more attractive to young weavers?',
   'HMW increase the income and financial stability of pattu saree weavers?',
-  'HMW reduce the time required to produce a pattu saree without losing authenticity?',
-  'HMW preserve traditional weaving techniques while allowing modern innovation?',
-  'HMW create more awareness about the cultural value of pattu sarees among younger customers?',
-  'HMW connect weavers directly with customers to reduce middlemen exploitation?',
-  'HMW make pattu sarees more affordable for wider audiences while maintaining quality?',
-  'HMW ensure fair wages and better working conditions for traditional weavers?',
-  'HMW encourage fashion designers to use pattu saree fabrics in modern clothing styles?',
-  'HMW help traditional weavers adopt digital platforms for selling and marketing?',
-  'HMW improve access to raw materials like silk and zari at reasonable costs?',
-  'HMW make weaving communities more sustainable and economically independent?',
-  'HMW increase demand for authentic handwoven pattu sarees in global markets?',
+  'HMW preserve traditional techniques while allowing modern innovation?',
+  'HMW connect weavers directly with customers to reduce exploitation?',
+  'HMW help traditional weavers adopt digital platforms for marketing?',
   'HMW protect pattu sarees from imitation and machine-made duplicates?',
-  'HMW improve training programmes so more people can learn traditional weaving skills?',
-  'HMW make the weaving process safer and less physically exhausting for weavers?',
-  'HMW build stronger branding for specific weaving regions like Kanchipuram or Dharmavaram?',
 ];
 
 const ProblemFraming = () => {
   return (
-    <section id="problem-framing" className="bg-gray-50 py-16 px-6">
-      <div className="max-w-4xl mx-auto space-y-8">
+    <section id="problem-framing" className="bg-gray-50/50 py-24 px-6">
+      <div className="max-w-4xl mx-auto space-y-16">
 
         {/* Section Title */}
-        <h2 className="text-2xl font-bold text-gray-900">Problem Framing</h2>
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Problem Framing</h2>
+          <p className="text-gray-500 leading-relaxed text-lg">
+            Defining the core challenge and identifying the leverage points for intervention.
+          </p>
+        </div>
 
         {/* Point of View Statement */}
-        <div>
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Point of view statement</h3>
-          <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-            <p className="text-gray-700 leading-relaxed">
-              Raju, a master pattu saree weaver with 30+ years of experience, needs a way to connect his craft
-              directly with the customers who value it — because the current system of middlemen makes him
-              economically invisible, keeps his income far below the value he creates, and gives him no mechanism
-              to prove the authenticity of his handloom work.
+        <div className="space-y-8">
+          <h3 className="text-2xl font-bold text-gray-900 px-4">Point of view statement</h3>
+          <div className="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm hover-lift">
+            <p className="text-gray-700 text-xl font-medium leading-relaxed italic">
+              "Raju, a master pattu saree weaver, needs a way to connect his craft directly with the customers who value it — because the current system makes him economically invisible."
             </p>
           </div>
         </div>
 
         {/* HMW Questions */}
-        <div>
-          <h3 className="text-lg font-bold text-gray-900 mb-4">
-            17 How Might We questions
+        <div className="space-y-8">
+          <h3 className="text-2xl font-bold text-gray-900 px-4">
+            How Might We questions
           </h3>
-          <div className="space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {hmwQuestions.map((q, i) => (
               <div
                 key={i}
-                className="bg-white border-l-4 border-gray-300 rounded-r-xl pl-4 pr-6 py-4 shadow-sm hover:border-gray-500 hover:shadow-md transition-all"
+                className="bg-white rounded-2xl px-8 py-6 border border-gray-100 shadow-sm hover-lift group"
               >
-                <p className="text-gray-700 leading-relaxed text-sm">{q}</p>
+                <div className="flex gap-4 items-center">
+                  <span className="text-[10px] font-bold text-gray-300 group-hover:text-gray-900 transition-colors uppercase tracking-widest">HMW {i + 1}</span>
+                  <p className="text-gray-700 font-medium text-sm leading-relaxed">{q}</p>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Down Arrow */}
-        <div className="flex justify-center">
-          <svg className="w-6 h-6 text-gray-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-          </svg>
         </div>
 
       </div>

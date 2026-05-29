@@ -27,7 +27,7 @@ const UserUnderstanding = () => {
 
           <div className="prose prose-gray max-w-none">
             <p className="text-gray-600 leading-relaxed text-lg">
-              Raju has been weaving pattu sarees since age 16. He produces 2–3 sarees per month, each taking 10–15 days. He sells through agents who pay barely a fraction of the retail price.
+              Raju has been weaving kanchi sarees since age 16. He produces 2–3 sarees per month, each taking 10–15 days. He sells through agents who pay barely a fraction of the retail price.
             </p>
           </div>
 

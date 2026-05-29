@@ -29,8 +29,8 @@ const Mission = () => {
           
           <div className="space-y-6 text-gray-600 leading-relaxed text-lg font-light max-w-4xl">
             <p>
-              We are a student design team working to revive and sustain the livelihoods of traditional pattu saree weavers 
-              through human-centred design. Pattu silk weaving is a centuries-old craft embedded in the cultural identity of 
+              We are a student design team working to revive and sustain the livelihoods of traditional kanchi saree weavers 
+              through human-centred design. Kanchi silk weaving is a centuries-old craft embedded in the cultural identity of 
               communities across Kanchipuram, Dharmavaram, Pochampally, and Gadwal.
             </p>
             <p>

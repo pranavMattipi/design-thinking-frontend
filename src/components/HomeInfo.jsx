@@ -27,8 +27,8 @@ const HomeInfo = () => {
           
           <div className="space-y-6 text-gray-600 leading-relaxed text-lg font-light max-w-4xl">
             <p>
-              We are a student design team working to revive and sustain the livelihoods of traditional pattu saree weavers 
-              through human-centred design. Pattu silk weaving is a centuries-old craft embedded in the cultural identity of 
+              We are a student design team working to revive and sustain the livelihoods of traditional kanchi saree weavers 
+              through human-centred design. Kanchi silk weaving is a centuries-old craft embedded in the cultural identity of 
               communities across Kanchipuram, Dharmavaram, Pochampally, and Gadwal.
             </p>
             <p>
@@ -85,7 +85,7 @@ const HomeInfo = () => {
         <div className="bg-white rounded-3xl p-10 shadow-sm border border-gray-100 hover-lift">
           <h2 className="text-2xl font-bold mb-6 text-gray-900">The design challenge</h2>
           <p className="text-gray-700 text-xl font-medium leading-relaxed mb-8">
-            How might we ensure that traditional pattu saree weaving remains a dignified, economically viable, and
+            How might we ensure that traditional kanchi saree weaving remains a dignified, economically viable, and
             culturally celebrated livelihood?
           </p>
           <div className="flex flex-wrap gap-3">

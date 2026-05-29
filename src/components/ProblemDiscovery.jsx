@@ -12,14 +12,14 @@ const secondaryResearchPoints = [
 const communityQuotes = [
   { text: 'Buyers have no way to know if a saree is handloom or machine-made. The seller just says it’s handloom.', source: 'textile retailer' },
   { text: 'My cousin who is a weaver earns less than a construction worker. He wants his son to study engineering.', source: 'community contact' },
-  { text: 'When I buy a pattu saree, I feel connected to something ancient. But I don\'t know the weaver\'s name, village, or story.', source: 'urban buyer' },
+  { text: 'When I buy a kanchi saree, I feel connected to something ancient. But I don\'t know the weaver\'s name, village, or story.', source: 'urban buyer' },
   { text: 'We have GI tags but nobody checks. Even government shops sell fake Kanchipuram.', source: 'design student' },
 ];
 
 const keyInsights = [
   {
     title: '1. The weaver is invisible to the customer',
-    body: 'Despite high emotional attachment to pattu sarees, buyers have almost no information about the people who make them. This invisibility enables exploitation and removes a powerful source of perceived value.',
+    body: 'Despite high emotional attachment to kanchi sarees, buyers have almost no information about the people who make them. This invisibility enables exploitation and removes a powerful source of perceived value.',
   },
   {
     title: '2. Authenticity cannot be verified at point of sale',
@@ -44,7 +44,7 @@ const ProblemDiscovery = () => {
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Problem Discovery & Research</h2>
           <p className="text-gray-500 leading-relaxed text-lg">
-            Exploring the structural crisis in traditional pattu saree weaving through secondary research and community conversations.
+            Exploring the structural crisis in traditional kanchi saree weaving through secondary research and community conversations.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const ProblemDiscovery = () => {
         <div className="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm hover-lift">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Problem area and motivation</h3>
           <p className="text-gray-600 leading-relaxed text-lg mb-6">
-            Traditional pattu saree weaving in India — practised in Kanchipuram, Dharmavaram, Gadwal, and Pochampally — is a craft of extraordinary skill and cultural significance. Yet the weavers who produce these textiles face a structural crisis that has deepened over decades.
+            Traditional kanchi saree weaving in India — practised in Kanchipuram, Dharmavaram, Gadwal, and Pochampally — is a craft of extraordinary skill and cultural significance. Yet the weavers who produce these textiles face a structural crisis that has deepened over decades.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-500 leading-relaxed">
             <p>

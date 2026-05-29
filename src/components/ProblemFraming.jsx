@@ -1,12 +1,12 @@
 import React from 'react';
 
 const hmwQuestions = [
-  'HMW make traditional pattu saree weaving more attractive to young weavers?',
-  'HMW increase the income and financial stability of pattu saree weavers?',
+  'HMW make traditional kanchi saree weaving more attractive to young weavers?',
+  'HMW increase the income and financial stability of kanchi saree weavers?',
   'HMW preserve traditional techniques while allowing modern innovation?',
   'HMW connect weavers directly with customers to reduce exploitation?',
   'HMW help traditional weavers adopt digital platforms for marketing?',
-  'HMW protect pattu sarees from imitation and machine-made duplicates?',
+  'HMW protect kanchi sarees from imitation and machine-made duplicates?',
 ];
 
 const ProblemFraming = () => {
@@ -27,7 +27,7 @@ const ProblemFraming = () => {
           <h3 className="text-2xl font-bold text-gray-900 px-4">Point of view statement</h3>
           <div className="bg-white rounded-3xl p-10 border border-gray-100 shadow-sm hover-lift">
             <p className="text-gray-700 text-xl font-medium leading-relaxed italic">
-              "Raju, a master pattu saree weaver, needs a way to connect his craft directly with the customers who value it — because the current system makes him economically invisible."
+              "Raju, a master kanchi saree weaver, needs a way to connect his craft directly with the customers who value it — because the current system makes him economically invisible."
             </p>
           </div>
         </div>

@@ -39,11 +39,11 @@ const AboutUs = () => {
           ))}
         </div>
 
-        {/* Why Pattu Sarees */}
+        {/* Why Kanchi Sarees */}
         <div className="bg-gray-50/50 border border-gray-100 rounded-3xl p-10 hover-lift">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Why pattu sarees?</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Why kanchi sarees?</h3>
           <p className="text-gray-600 leading-relaxed text-lg">
-            Several of us grew up with pattu sarees as the centrepiece of weddings and festivals. Yet we realised we knew
+            Several of us grew up with kanchi sarees as the centrepiece of weddings and festivals. Yet we realised we knew
             almost nothing about the people who made them.
           </p>
           <div className="mt-8 pt-8 border-t border-gray-100">
